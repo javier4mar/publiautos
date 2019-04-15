@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-14 19:26:53
+/* Smarty version 3.1.33, created on 2019-04-14 23:27:17
   from '/Users/javierhernandez/Documents/Proyectos Web/Publiautos/global/view/headerMenu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb3dddd944986_03888082',
+  'unifunc' => 'content_5cb41635174d13_63314319',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f8c4a6cb70893794c27fcb71ec2721578af42d89' => 
     array (
       0 => '/Users/javierhernandez/Documents/Proyectos Web/Publiautos/global/view/headerMenu.tpl',
-      1 => 1555291456,
+      1 => 1555306016,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cb3dddd944986_03888082 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb41635174d13_63314319 (Smarty_Internal_Template $_smarty_tpl) {
 ?><header>
     <div class="container">
       <div class="row">
@@ -84,36 +84,38 @@ function content_5cb3dddd944986_03888082 (Smarty_Internal_Template $_smarty_tpl)
                     <!-- BEGIN NAV -->
                     <ul id="nav" class="hidden-xs">
                       <li class="active"> <a class="level-top" href="../home/"><span>Inicio</span></a></li>
-                      <li class="mega-menu hidden-sm"> <a class="level-top" href="../listing/"><span>Autos Usados</span></a> </li>
-                      <li class="fl-custom-tabmenulink mega-menu"> <a href="../auction/" class="level-top"> <span>Subastas</span> </a>
+                      <li class="fl-custom-tabmenulink mega-menu"> <a href="#" class="level-top"> <span>Autos Usados</span> </a>
                         <div class="level0-wrapper fl-custom-tabmenu" style="left: 0px; display: none;">
                           <div class="container">
                             <div class="header-nav-dropdown-wrapper clearer">
                               <div class="grid12-3">
                                 <div><img src="../resources/images/custom-img1.jpg" alt="custom-image"></div>
-                                <h4 class="heading">Subastas Activas</h4>
+                                <h4 class="heading">Cuanto cuesta mi carro</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                               </div>
                               <div class="grid12-3">
                                 <div><img src="../resources/images/custom-img2.jpg" alt="custom-image"></div>
-                                <h4 class="heading">SALE UP TO 30% OFF</h4>
+                                <h4 class="heading">Subastas</h4>
                                 <p>Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
                               </div>
                               <div class="grid12-3">
                                 <div><img src="../resources/images/custom-img3.jpg" alt="custom-image"></div>
-                                <h4 class="heading">SALE UP TO 30% OFF</h4>
+                                <h4 class="heading">Ofertas</h4>
                                 <p>Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
                               </div>
                               <div class="grid12-3">
                                 <div><img src="../resources/images/custom-img4.jpg" alt="custom-image"></div>
-                                <h4 class="heading">SALE UP TO 30% OFF</h4>
+                                <h4 class="heading">Reviews de carros</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                               </div>
                             </div>
                           </div>
                         </div>
                       </li>
-                      <li class="mega-menu hidden-sm"> <a class="level-top" href="compare.html"><span>Compare</span></a> </li>
+
+                      <li class="mega-menu hidden-sm"> <a class="level-top" href="../auction/"><span>Subastas</span></a> </li>
+                      
+                      <li class="mega-menu hidden-sm"> <a class="level-top" href="../compare/"><span>Comparador</span></a> </li>
                      
           
                     </ul>
