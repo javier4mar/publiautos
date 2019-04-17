@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-14 18:53:54
+/* Smarty version 3.1.33, created on 2019-04-16 20:23:21
   from '/Users/javierhernandez/Documents/Proyectos Web/Publiautos/login/view/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb3d622463e92_87428262',
+  'unifunc' => 'content_5cb68e190c8703_01038922',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f383a019c90f70213e4815aaba4450c4b10f17b' => 
     array (
       0 => '/Users/javierhernandez/Documents/Proyectos Web/Publiautos/login/view/login.tpl',
-      1 => 1555289630,
+      1 => 1555467780,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cb3d622463e92_87428262 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb68e190c8703_01038922 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="es">
     <head>
@@ -47,6 +47,9 @@ function content_5cb3d622463e92_87428262 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" type="text/css" href="../resources/stylesheet/jquery.mobile-menu.css">
         <link rel="stylesheet" type="text/css" href="../resources/stylesheet/style.css" media="all">
         <link rel="stylesheet" type="text/css" href="../resources/stylesheet/responsive.css" media="all">
+        <link rel="stylesheet" type="text/css" href="../resources/app-assets/vendors/css/forms/selects/select2.min.css">
+        <link rel="stylesheet" type="text/css" href="../resources/app-assets/vendors/css/extensions/toastr.css">
+        <link rel="stylesheet" type="text/css" href="../resources/app-assets/vendors/css/modal/sweetalert.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:300,400,500,600,700,800" rel="stylesheet">
@@ -81,8 +84,7 @@ function content_5cb3d622463e92_87428262 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="account-login container">
                         <!--page-title-->
 
-                        <form action="" method="post" id="login-form">
-                            <input name="form_key" type="hidden" value="EPYwQxF6xoWcjLUr">
+                        <form action="#" method="post" id="login-form">
                             <fieldset class="col2-set">
                                 <div class="col-1 new-users"> 
                                     <strong>Nuevos Usuarios</strong>    
@@ -102,24 +104,24 @@ function content_5cb3d622463e92_87428262 (Smarty_Internal_Template $_smarty_tpl)
                                             <li>
                                                 <label for="email">Correo Electronico<em class="required">*</em></label>
                                                 <div class="input-box">
-                                                    <input type="text" name="login[username]" value="" id="email" class="input-text required-entry validate-email" title="Email Address">
+                                                    <input type="text" name="username" value="" id="username" class="input-text" title="Correo Electronico" autocomplete="false">
                                                 </div>
                                             </li>
                                             <li>
                                                 <label for="pass">Contraseña<em class="required">*</em></label>
                                                 <div class="input-box">
-                                                    <input type="password" name="login[password]" class="input-text required-entry validate-password" id="pass" title="Password">
+                                                    <input type="password" name="password" class="input-text " id="password" title="Password">
                                                 </div>
                                             </li>
                                         </ul>
-                                       
+
                                         <p class="required">* Campos Requeridos</p>
 
 
 
                                         <div class="buttons-set">
 
-                                            <button type="button" class="button login" title="Ingresar" name="send" id="send2"><span>Ingresar</span></button>
+                                            <button type="button" class="button login" title="Ingresar" name="send" id="send"><span>Ingresar</span></button>
 
                                             <a href="./?forget" class="forgot-word">¿Olvido su contraseña?</a>
                                         </div> <!--buttons-set-->
@@ -137,8 +139,38 @@ function content_5cb3d622463e92_87428262 (Smarty_Internal_Template $_smarty_tpl)
 
         </div>
         <!--page-->
-        
+        <?php echo $_smarty_tpl->tpl_vars['mobileMenu']->value;?>
+
         <!-- JavaScript --> 
+        <?php echo '<script'; ?>
+ src="../resources/app-assets/vendors/js/vendors.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="../resources/app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="../resources/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="../resources/app-assets/vendors/js/forms/toggle/switchery.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="../resources/app-assets/vendors/js/modal/sweetalert.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="../resources/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="../resources/app-assets/vendors/js/extensions/jquery.blockUI.js" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="../resources/app-assets/vendors/js/forms/validation/jquery.validate.min.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="../resources/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js" type="text/javascript"><?php echo '</script'; ?>
+>
+
+
         <?php echo '<script'; ?>
  type="text/javascript" src="../resources/js/jquery.min.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
 "><?php echo '</script'; ?>
@@ -175,7 +207,17 @@ function content_5cb3d622463e92_87428262 (Smarty_Internal_Template $_smarty_tpl)
  type="text/javascript" src="../resources/js/jquery.mobile-menu.min.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
 "><?php echo '</script'; ?>
 >
+        <!-- BEGIN VENDOR JS-->
 
+        <?php echo '<script'; ?>
+ src="../global/js/global.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
+" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="js/login.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
+" type="text/javascript"><?php echo '</script'; ?>
+>
 
-    </body></html><?php }
+    </body>
+</html><?php }
 }

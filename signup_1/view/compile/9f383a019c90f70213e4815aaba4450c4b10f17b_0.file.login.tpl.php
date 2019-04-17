@@ -1,11 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+/* Smarty version 3.1.33, created on 2019-04-14 18:40:47
+  from '/Users/javierhernandez/Documents/Proyectos Web/Publiautos/login/view/login.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5cb3d30fcce263_95616409',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '9f383a019c90f70213e4815aaba4450c4b10f17b' => 
+    array (
+      0 => '/Users/javierhernandez/Documents/Proyectos Web/Publiautos/login/view/login.tpl',
+      1 => 1555288582,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5cb3d30fcce263_95616409 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
+<html lang="es">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Harrier Login Page</title>
+        <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Default Description">
-        <meta name="keywords" content="fashion, store, E-commerce">
+        <meta name="description" content="<?php echo $_smarty_tpl->tpl_vars['appDescription']->value;?>
+">
+        <meta name="keywords" content="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
+">
         <meta name="robots" content="*">
         <link rel="icon" href="#" type="image/x-icon">
         <link rel="shortcut icon" href="#" type="image/x-icon">
@@ -28,14 +54,15 @@
     <body>
         <div id="page">
 
-            {$header}
+            <?php echo $_smarty_tpl->tpl_vars['header']->value;?>
+
 
             <div class="page-heading">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="page-title">
-                                <h2>Complete Information</h2>
+                                <h2>Ingrese o cree una cuenta</h2>
                             </div>
                         </div>
                         <!--col-xs-12-->
@@ -58,57 +85,44 @@
                             <input name="form_key" type="hidden" value="EPYwQxF6xoWcjLUr">
                             <fieldset class="col2-set">
                                 <div class="col-1 new-users"> 
-                                    <strong>New Customers</strong>    
+                                    <strong>Nuevos Usuarios</strong>    
                                     <div class="content">
 
-                                        <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+                                        <p>Al crear una cuenta en PubliAutosCR, podrá administrar mejor sus publicaciones, ver estadisticas, sus ofertas de forma mas rapida!</p>
                                         <div class="buttons-set">
-                                            <button type="button" title="Create an Account" class="button create-account" onClick=""><span><span>Create an Account</span></span></button>
+                                            <button type="button" title="Create an Account" class="button create-account" onClick=""><span><span>Crear una cuenta</span></span></button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-2 registered-users">
-                                    <strong>Registered Customers</strong>             
+                                    <strong>Usuarios Registrados</strong>             
                                     <div class="content">
 
-                                        <p>If you have an account with us, please log in.</p>
+                                        <p>Si usted ya tiene una cuenta, por favor ingrese aquí.</p>
                                         <ul class="form-list">
                                             <li>
-                                                <label for="email">Email Address<em class="required">*</em></label>
+                                                <label for="email">Correo Electronico<em class="required">*</em></label>
                                                 <div class="input-box">
                                                     <input type="text" name="login[username]" value="" id="email" class="input-text required-entry validate-email" title="Email Address">
                                                 </div>
                                             </li>
                                             <li>
-                                                <label for="pass">Password<em class="required">*</em></label>
+                                                <label for="pass">Contraseña<em class="required">*</em></label>
                                                 <div class="input-box">
                                                     <input type="password" name="login[password]" class="input-text required-entry validate-password" id="pass" title="Password">
                                                 </div>
                                             </li>
                                         </ul>
-                                        <div class="remember-me-popup">
-                                            <div class="remember-me-popup-head" style="display:none">
-                                                <h3 id="text2">What's this?</h3>
-                                                <a href="#" class="remember-me-popup-close" onClick="showDiv()" title="Close">Close</a>
-                                            </div>
-                                            <div class="remember-me-popup-body" style="display:none">
-                                                <p id="text1">Checking "Remember Me" will let you access your shopping cart on this computer when you are logged out</p>
-                                                <div class="remember-me-popup-close-button a-right">
-                                                    <a href="#" class="remember-me-popup-close button" title="Close" onClick="
-                                                            showDiv()"><span>Close</span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <p class="required">* Required Fields</p>
+                                       
+                                        <p class="required">* Campos Requeridos</p>
 
 
 
                                         <div class="buttons-set">
 
-                                            <button type="submit" class="button login" title="Login" name="send" id="send2"><span>Login</span></button>
+                                            <button type="button" class="button login" title="Ingresar" name="send" id="send2"><span>Ingresar</span></button>
 
-                                            <a href="#" class="forgot-word">Forgot Your Password?</a>
+                                            <a href="./?forget" class="forgot-word">¿Olvido su contraseña?</a>
                                         </div> <!--buttons-set-->
                                     </div> <!--content-->                               
                                 </div> <!--col-2 registered-users-->
@@ -120,20 +134,49 @@
                 </div><!--main-container-->
 
             </div> <!--col1-layout-->
-
-
+            <?php echo $_smarty_tpl->tpl_vars['footer']->value;?>
 
         </div>
+        <!--page-->
+        
+        <!-- JavaScript --> 
+        <?php echo '<script'; ?>
+ type="text/javascript" src="../resources/js/jquery.min.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
+"><?php echo '</script'; ?>
+> 
+        <?php echo '<script'; ?>
+ type="text/javascript" src="../resources/js/bootstrap.min.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
+"><?php echo '</script'; ?>
+> 
+        <?php echo '<script'; ?>
+ type="text/javascript" src="../resources/js/parallax.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
+"><?php echo '</script'; ?>
+> 
+        <?php echo '<script'; ?>
+ type="text/javascript" src="../resources/js/revslider.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
+"><?php echo '</script'; ?>
+> 
+        <?php echo '<script'; ?>
+ type="text/javascript" src="../resources/js/common.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
+"><?php echo '</script'; ?>
+> 
+        <?php echo '<script'; ?>
+ type="text/javascript" src="../resources/js/jquery.bxslider.min.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
+"><?php echo '</script'; ?>
+> 
+        <?php echo '<script'; ?>
+ type="text/javascript" src="../resources/js/jquery.flexslider.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
+"><?php echo '</script'; ?>
+> 
+        <?php echo '<script'; ?>
+ type="text/javascript" src="../resources/js/owl.carousel.min.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
+"><?php echo '</script'; ?>
+> 
+        <?php echo '<script'; ?>
+ type="text/javascript" src="../resources/js/jquery.mobile-menu.min.js?<?php echo $_smarty_tpl->tpl_vars['versionJs']->value;?>
+"><?php echo '</script'; ?>
+>
 
-        <script type="text/javascript" src="../resources/js/jquery.min.js"></script> 
-        <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script> 
-        <script type="text/javascript" src="../resources/js/parallax.js"></script> 
-        <script type="text/javascript" src="../resources/js/revslider.js"></script> 
-        <script type="text/javascript" src="../resources/js/common.js"></script> 
-        <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script> 
-        <script type="text/javascript" src="../resources/js/jquery.flexslider.js"></script> 
-        <script type="text/javascript" src="../resources/js/owl.carousel.min.js"></script> 
-        <script type="text/javascript" src="../resources/js/jquery.mobile-menu.min.js"></script>
 
-
-    </body></html>
+    </body></html><?php }
+}

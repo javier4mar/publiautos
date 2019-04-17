@@ -1,44 +1,60 @@
 <?php
 
-class mdl_login{
+class mdl_login {
 
-    public function __construct(){}
-
-    function autenticar($user_name, $password){
-        
-        return 0;
+    public function __construct(&$db) {
+        $this->db = $db;
     }
 
-    public function servicio($url_postpago_api, $headers, $params, $http){
-        $ch = curl_init();
-        $agent = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : "localhost";
+    function loginUser($username, $password, $ip) {
 
-        curl_setopt($ch, CURLOPT_URL, $url_postpago_api);
+        try {
+            $sql = "CALL `pr_login_user`(
+                             :vUsername , 
+                             :vPassword , 
+                             :vIp , 
+                             @vStatus , 
+                             @vCode , 
+                             @vMsg , 
+                             @vIdUser , 
+                             @vFirstName , 
+                             @vLastName , 
+                             @vAvatarImg , 
+                             @vEmail , 
+                             @vGender , 
+                             @vOrigin ,
+                             @vNewsletter ,
+                             @vStatusUser ,
+                             @vLastIP ,
+                             @vIdRol);";
 
-        if ($http == "POST") {
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($params));
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindParam("vUsername", $username);
+            $stmt->bindParam("vPassword", $password);
+            $stmt->bindParam("vIp", $ip);
+
+            $stmt->execute();
+            $stmt->closeCursor();
+
+            $result = $this->db->query("SELECT @vStatus as vStatus  , 
+                             @vCode as vCode, 
+                             @vMsg  as vMsg, 
+                             @vIdUser  as vIdUser, 
+                             @vFirstName as vFirstName, 
+                             @vLastName as vLastName, 
+                             @vAvatarImg as vAvatarImg, 
+                             @vEmail  as vEmail, 
+                             @vGender as vGender, 
+                             @vOrigin  as vOrigin,
+                             @vNewsletter as vNewsletter,
+                             @vStatusUser as vStatusUser,
+                             @vLastIP as vLastIP,
+                             @vIdRol as vIdRol;")->fetch();
+
+            return $result;
+        } catch (Exception $ex) {
+            return null;
         }
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_USERAGENT, $agent);
-
-        curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 30); //timeout in seconds
-
-        $result = curl_exec($ch);
-
-        if (curl_error($ch)) {
-            $result = array("status" => "ERROR", "msg" => curl_error($ch));
-            return json_decode($result, true);
-            die;
-        }
-        curl_close($ch);
-
-        return json_decode($result, true);
     }
-
-
 
 }

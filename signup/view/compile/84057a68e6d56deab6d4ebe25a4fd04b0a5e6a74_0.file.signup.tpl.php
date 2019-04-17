@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-14 23:12:40
+/* Smarty version 3.1.33, created on 2019-04-16 19:47:31
   from '/Users/javierhernandez/Documents/Proyectos Web/Publiautos/signup/view/signup.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb412c83b1065_48231121',
+  'unifunc' => 'content_5cb685b35eba47_05091911',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '84057a68e6d56deab6d4ebe25a4fd04b0a5e6a74' => 
     array (
       0 => '/Users/javierhernandez/Documents/Proyectos Web/Publiautos/signup/view/signup.tpl',
-      1 => 1555305157,
+      1 => 1555463846,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cb412c83b1065_48231121 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb685b35eba47_05091911 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
     <head>
@@ -90,7 +90,7 @@ function content_5cb412c83b1065_48231121 (Smarty_Internal_Template $_smarty_tpl)
                                                     <li>
                                                         <label for="email">Nombre<em class="required">*</em></label>
                                                         <div class="input-box">
-                                                            <input type="text" name="name"  value="" id="name" class="input-text required-entry validate-email" title="Name"
+                                                            <input type="text" name="name"  id="name" class="input-text required-entry validate-email" title="Name"
                                                                    required
                                                                    data-validation-required-message= "El nombre es requerido">
                                                         </div>
@@ -98,14 +98,14 @@ function content_5cb412c83b1065_48231121 (Smarty_Internal_Template $_smarty_tpl)
                                                     <li>
                                                         <label for="email">Apellido<em class="required">*</em></label>
                                                         <div class="input-box">
-                                                            <input type="text" name="lastname" value="" id="lastname" class="input-text required-entry validate-email" title="Last Name" required
+                                                            <input type="text" name="lastname"  id="lastname" class="input-text required-entry validate-email" title="Last Name" required
                                                                    data-validation-required-message= "El apellido es requerido">
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <label for="email">Correo Electronico<em class="required">*</em></label>
                                                         <div class="input-box">
-                                                            <input type="text" name="email" value="" id="email" class="input-text required-entry validate-email" title="Email Address" required
+                                                            <input type="text" name="email"  id="email" class="input-text required-entry validate-email" title="Email Address" required
                                                                    data-validation-required-message= "El correro electronico es requerido">
                                                         </div>
                                                     </li>
@@ -124,16 +124,14 @@ function content_5cb412c83b1065_48231121 (Smarty_Internal_Template $_smarty_tpl)
                                                                    data-validation-required-message= "La contraseña es requerida">
                                                         </div>
                                                     </li>
-
                                                 </ul>
-
 
                                                 <p class="required">* Campos Requeridos</p>
 
 
 
                                                 <div class="buttons-set">
-                                                    <button type="submit" class="button login" title="Sign-Up" name="send" id="send"><span>Crear Cuenta</span></button>
+                                                    <button type="button" class="button login" title="Sign-Up" name="send" id="send"><span>Crear Cuenta</span></button>
                                                 </div> 
                                             </form>
                                         </div>
@@ -229,6 +227,14 @@ function content_5cb412c83b1065_48231121 (Smarty_Internal_Template $_smarty_tpl)
  src="../resources/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js" type="text/javascript"><?php echo '</script'; ?>
 >
 
+       
+        <?php echo '<script'; ?>
+ src="../global/js/global.js?vFin1" type="text/javascript"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="js/signup.js?vFin1" type="text/javascript"><?php echo '</script'; ?>
+>
+
         <?php echo '<script'; ?>
  type="text/javascript" src="../resources/js/jquery.min.js"><?php echo '</script'; ?>
 > 
@@ -255,15 +261,6 @@ function content_5cb412c83b1065_48231121 (Smarty_Internal_Template $_smarty_tpl)
 > 
         <?php echo '<script'; ?>
  type="text/javascript" src="../resources/js/jquery.mobile-menu.min.js"><?php echo '</script'; ?>
->
-
-        <!-- BEGIN VENDOR JS-->
-
-        <?php echo '<script'; ?>
- src="../global/js/global.js?vFin1" type="text/javascript"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="js/signup.js?vFin1" type="text/javascript"><?php echo '</script'; ?>
 >
 
     </body>

@@ -66,7 +66,7 @@
                                                     <li>
                                                         <label for="email">Nombre<em class="required">*</em></label>
                                                         <div class="input-box">
-                                                            <input type="text" name="name"  value="" id="name" class="input-text required-entry validate-email" title="Name"
+                                                            <input type="text" name="name"  id="name" class="input-text required-entry validate-email" title="Name"
                                                                    required
                                                                    data-validation-required-message= "El nombre es requerido">
                                                         </div>
@@ -74,14 +74,14 @@
                                                     <li>
                                                         <label for="email">Apellido<em class="required">*</em></label>
                                                         <div class="input-box">
-                                                            <input type="text" name="lastname" value="" id="lastname" class="input-text required-entry validate-email" title="Last Name" required
+                                                            <input type="text" name="lastname"  id="lastname" class="input-text required-entry validate-email" title="Last Name" required
                                                                    data-validation-required-message= "El apellido es requerido">
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <label for="email">Correo Electronico<em class="required">*</em></label>
                                                         <div class="input-box">
-                                                            <input type="text" name="email" value="" id="email" class="input-text required-entry validate-email" title="Email Address" required
+                                                            <input type="text" name="email"  id="email" class="input-text required-entry validate-email" title="Email Address" required
                                                                    data-validation-required-message= "El correro electronico es requerido">
                                                         </div>
                                                     </li>
@@ -100,16 +100,14 @@
                                                                    data-validation-required-message= "La contraseña es requerida">
                                                         </div>
                                                     </li>
-
                                                 </ul>
-
 
                                                 <p class="required">* Campos Requeridos</p>
 
 
 
                                                 <div class="buttons-set">
-                                                    <button type="submit" class="button login" title="Sign-Up" name="send" id="send"><span>Crear Cuenta</span></button>
+                                                    <button type="button" class="button login" title="Sign-Up" name="send" id="send"><span>Crear Cuenta</span></button>
                                                 </div> 
                                             </form>
                                         </div>
@@ -185,6 +183,10 @@
         <script src="../resources/app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
         <script src="../resources/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js" type="text/javascript"></script>
 
+       
+        <script src="../global/js/global.js?vFin1" type="text/javascript"></script>
+        <script src="js/signup.js?vFin1" type="text/javascript"></script>
+
         <script type="text/javascript" src="../resources/js/jquery.min.js"></script> 
         <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script> 
         <script type="text/javascript" src="../resources/js/parallax.js"></script> 
@@ -194,11 +196,6 @@
         <script type="text/javascript" src="../resources/js/jquery.flexslider.js"></script> 
         <script type="text/javascript" src="../resources/js/owl.carousel.min.js"></script> 
         <script type="text/javascript" src="../resources/js/jquery.mobile-menu.min.js"></script>
-
-        <!-- BEGIN VENDOR JS-->
-
-        <script src="../global/js/global.js?vFin1" type="text/javascript"></script>
-        <script src="js/signup.js?vFin1" type="text/javascript"></script>
 
     </body>
 </html>

@@ -10,6 +10,7 @@ return [
     'email'      => 'info@publiautoscr.com',
     'ano'      => date("Y"),
     'slideHeaderBanner' =>"",
+    'googleMapsKey' => "AIzaSyCZolqu0R0jg9wxKlg_BDWOGoGPN8T8360",
   
     'app-image'     => '../resources/app-assets/images/logo/qpos.png',
     'app-home'      => '../resources/app-assets/images/logo/qpos.png',

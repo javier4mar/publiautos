@@ -1,44 +1,38 @@
 <?php
 
-class mdl_signup{
+class mdl_signup {
 
-    public function __construct(){}
+    public function __construct(&$db) {
+        $this->db = $db;
+    }
 
-    function autenticar($user_name, $password){
-        
+    function autenticar($user_name, $password) {
+
         return 0;
     }
 
-    public function servicio($url_postpago_api, $headers, $params, $http){
-        $ch = curl_init();
-        $agent = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : "localhost";
+    function addUser($name, $lastname, $email, $password, $origin,$rol, $ip) {
 
-        curl_setopt($ch, CURLOPT_URL, $url_postpago_api);
+        try {
+            $sql = "CALL `pr_create_user`( :vName , :vLastName , :vEmail ,:vPassword, :vOrigin,:vRol ,:vIp, @p6, @p7, @p8);";
 
-        if ($http == "POST") {
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($params));
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindParam("vName", $name);
+            $stmt->bindParam("vLastName", $lastname);
+            $stmt->bindParam("vEmail", $email);
+            $stmt->bindParam("vPassword", $password);
+            $stmt->bindParam("vOrigin", $origin);
+            $stmt->bindParam("vRol", $rol);
+            $stmt->bindParam("vIp", $ip);
+
+            $stmt->execute();
+            $stmt->closeCursor();
+
+            $result = $this->db->query("SELECT @p6 as vStatus ,@p7 as vCode , @p8 as vMsg;")->fetch();
+
+            return $result;
+        } catch (Exception $ex) {
+            return null;
         }
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_USERAGENT, $agent);
-
-        curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 30); //timeout in seconds
-
-        $result = curl_exec($ch);
-
-        if (curl_error($ch)) {
-            $result = array("status" => "ERROR", "msg" => curl_error($ch));
-            return json_decode($result, true);
-            die;
-        }
-        curl_close($ch);
-
-        return json_decode($result, true);
     }
-
-
-
 }
